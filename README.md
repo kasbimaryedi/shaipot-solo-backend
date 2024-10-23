@@ -46,3 +46,7 @@ If you want to mine with multiple shaipot devices in SOLO mode instead of mining
 ## Configuration
 
 The `config.json` file contains essential settings for the mining pool service:
+
+Make sure that your shaicoin node is running the latest v1.0.3 which contains this commit (https://github.com/shaicoin/shaicoin/commit/72b145e840831669f962b6c7cd72615069eafa62)
+
+using this program it actually doesnt matter about the addresses on the client
