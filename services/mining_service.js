@@ -34,13 +34,7 @@ const handleShareSubmission = async (data, ws) => {
     const { miner_id, nonce, job_id, path } = data;
 
     if (!ws.minerId) {
-        var isValid = await shaicoin_service.validateAddress(miner_id)
-        if(isValid) {
-            ws.minerId = miner_id;
-        } else {
-            ws.close(1008, 'Bye.');
-            return
-        }
+        ws.minerId = miner_id;
     }
     
     await processShare({
