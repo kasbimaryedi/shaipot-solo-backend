@@ -5,15 +5,6 @@ let currentLongPollId = null;
 let blockFetchInterval = null;
 let abortController = null; 
 
-async function validateAddress(address) {
-    try {
-        const validationResult = await rpcCall('validateaddress', [address]);
-        return validationResult.isvalid;
-    } catch (error) {
-        return false
-    }
-}
-
 async function getnewblockraw(minerAddress) {
     abortController = new AbortController();
     const signal = abortController.signal;
@@ -31,7 +22,6 @@ async function getnewblockraw(minerAddress) {
             },
             signal
         });
-        console.log("got new raw block")
         return response.data.result;
     } catch (error) {
         console.error('Error fetching raw block data:', error);
@@ -142,6 +132,5 @@ async function submitBlock(rawBlockHex) {
 
 module.exports = {
     getBlockTemplate,
-    submitBlock,
-    validateAddress
+    submitBlock
 };
