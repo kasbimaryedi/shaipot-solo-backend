@@ -1,5 +1,5 @@
 {
-    "rpc_url": "http://127.0.0.1:8710",
+    "rpc_url": "http://127.0.0.1:3333",
     "rpc_username": "saroden",
     "rpc_password": "12346",
     "pool_shaicoin_address": "sh1q0hswq82ut8nzk2sa6ryyw00qntrk89m4nrhank"
